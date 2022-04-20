@@ -1,10 +1,11 @@
 import React from 'react';
-import './NavBar.css';
+import './NavBar.scss';
+import imgLogo from '../../multimedia/logo2.png';
 
 function NavBar(){
     return(
         <nav className="nav">
-            <div className='brand'><h2>Mi tienda</h2></div>
+            <div className='brand'><img width="140" src={imgLogo} alt="logo tienda"/></div>
             <ul>
                 <li className='menu'>
                     <a href="/">Home</a>
