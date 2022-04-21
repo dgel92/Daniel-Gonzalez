@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
 import './Box.scss';
+import CardType from '../CardType/CardType.jsx';
 
 
-const Box = () => {
+function Box(props) {
     return (
-        <div className='box'>Esto es una caja</div>
-    );
-};
+        <div className='box'>
+            <div className='Cardtype'>
+                <CardType/>
+                <CardType/>
+                <CardType/>
+            </div>
+        </div>
+    )
+}
 
 export default Box;

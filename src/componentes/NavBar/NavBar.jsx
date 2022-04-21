@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.scss';
+import CartWidget from '../CartWidget/CartWidget.jsx';
 import imgLogo from '../../multimedia/logo2.png';
 
 function NavBar(){
@@ -20,6 +21,7 @@ function NavBar(){
                     <a href="/">Carrito de compras</a>
                 </li>
             </ul>
+            <div><CartWidget/></div>
         </nav>
     )
 }

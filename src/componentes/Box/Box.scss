@@ -1,5 +1,7 @@
 .box {
-    height: 500px;
-    border: 2px solid red;
-    background-color: blueviolet;
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(21, 21, 126, 0.705);
 }
