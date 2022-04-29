@@ -1,15 +1,16 @@
 import './App.scss';
 import NavBar from './componentes/NavBar/NavBar';
 import Box from './componentes/Box/Box';
-import Contador from './componentes/contador/Contador'
+import Contador from './componentes/ItemCount/ItemCount'
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
 function App(){
   return(
     <div className="App">
       <header className="App-header">
         <NavBar/>
-        <Box/>
-        <Contador stock={10} inicial={1}/>
+        <ItemListContainer titulo="hola mundo"/>
+          <hr/>
       </header>
     </div>
     );
