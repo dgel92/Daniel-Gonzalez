@@ -9,7 +9,7 @@ function getMovies(){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(moviesDB);
-        }, 500);
+        },5000);
     });    
 }
 
