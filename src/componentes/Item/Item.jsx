@@ -5,7 +5,7 @@ function Item({movie}){
     return(
         <div className='card'>
             <div className='card'>
-                <div className='card_ph'><img src={portada.img} alt={portada.img}/></div>
+                <div className='card_ph'><img alt= {movie.tittle} src={movie.imgUrl}/></div>
                 <div className='card_text'>
                     <h1>{movie.tittle}</h1>
                     <h3>{movie.genre}</h3>

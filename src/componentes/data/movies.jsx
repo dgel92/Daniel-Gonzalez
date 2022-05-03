@@ -1,109 +1,111 @@
-import imagen1 from '../../multimedia/peliculas/laNaranjaMecanica.jpg';
-import imagen2 from '../../multimedia/peliculas/historiaAmericanaX.jpg';
-import imagen3 from '../../multimedia/peliculas/theShawshankRedemption.jpg';
-
-
-const movies =[
+const movie =[
 {
     "id": 1,
     "tittle": "titulo-1",
-    "portada": {imagen1},
+    "imgUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
-    "stock": 50,
+    "stock": 5,
     "price": 100,
-    "format2": "cd"
+    "formato": "cd"
 },
 {
     "id": 2,
     "tittle": "titulo-2",
-    "img": {imagen2},
+    "imgUrl": "https://cdn.culturagenial.com/es/imagenes/requiem.jpg",
     "year":2000,
     "genre": "film",
-    "stock": 50,
+    "stock": 8,
     "price": 100,
-    "format2": "cd"
+    "format0": "cd"
 },
 {
     "id": 3,
     "tittle": "titulo-3",
-    "img": {imagen3},
+    "imUrl": "https://pics.filmaffinity.com/R_quiem_por_un_sue_o-174867645-mmed.jpg",
     "year":2000,
     "genre": "film",
-    "stock": 50,
+    "stock": 2,
     "price": 100,
-    "format2": "cd"
+    "formato": "cd"
 },
 {
     "id": 4,
     "tittle": "titulo-4",
+    "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
-    "stock": 50,
+    "genre": "film", 
+    "stock": 1,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 5,
     "tittle": "titulo-5",
+    "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 6,
     "tittle": "titulo-6",
+    "imgUrl":"https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
     "stock": 50,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 7,
     "tittle": "titulo-7",
+    "imgUrl":"https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
     "stock": 50,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 8,
     "tittle": "titulo-8",
+    "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
     "stock": 50,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 9,
     "tittle": "titulo-9",
+    "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
     "stock": 50,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 10,
     "tittle": "titulo-10",
+    "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
     "genre": "film",
     "stock": 50,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 {
     "id": 11,
     "tittle": "titulo-11",
-    "year":2000,
+    "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "genre": "film",
     "stock": 50,
     "price": 100,
-    "format": "cd"
+    "formato": "cd"
 },
 ]
 
-export default movies;
+export default movie;

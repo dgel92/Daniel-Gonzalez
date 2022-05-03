@@ -1,26 +1,24 @@
-import React from 'react';
 import react, {useEffect, useState} from 'react';
-import './ItemListContainer.scss';
 import moviesDB from '../data/movies';
-import ItemList from '../ItemList/ItemList';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 
-function getMovie(){
+function getMovie(id){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(moviesDB);
-        },5000);
+            const movieFound = moviesDB.find((movie) => {
+                return id === movie.id
+            })
+            resolve(movieFound);
+        },2000);
     });    
 }
 
-function ItemListContainer({}){
-    const [movie, setMovie] = useState([]);
-    
-    
+function ItemDetailContainer({id}){
+    const [movie, setMovie] = useState([]);    
     useEffect(() => {
-        getMovie().then(respuestaPromise => {
-            setMovie(respuestaPromise[0]);
+        getMovie(id).then(respuestaPromise => {
+            setMovie(respuestaPromise);
         });
     }, []);
 
@@ -33,4 +31,4 @@ function ItemListContainer({}){
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer 
