@@ -3,23 +3,34 @@ import react, {useEffect, useState} from 'react';
 import './ItemListContainer.scss';
 import moviesDB from '../data/movies';
 import ItemList from '../ItemList/ItemList';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import {useParams} from 'react-router-dom';
+import movie from '../data/movies';
 
 
-function getMovie(){
+function getMovie(categoryid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
+            if (categoryid !== undefined){
+                const arrayFiltered = moviesDB.filter((movie) =>{
+                    return movie.genre === categoryid;
+                });
+                resolve(arrayFiltered);
+            }
+            else{
             resolve(moviesDB);
-        },5000);
+            }
+        },500);
     });    
 }
 
+
+
 function ItemListContainer({}){
     const [movie, setMovie] = useState([]);
-    
+    const {categoryid}= useParams();    
     
     useEffect(() => {
-        getMovie().then(respuestaPromise => {
+        getMovie(categoryid).then(respuestaPromise => {
             setMovie(respuestaPromise[0]);
         });
     }, []);
@@ -27,7 +38,7 @@ function ItemListContainer({}){
     return(
         <div className='main'>
             <div className='wrapper'>
-                <ItemDetail movie={movie}/>
+                <ItemList movie={movie}/>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ const movie =[
     "tittle": "titulo-1",
     "imgUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 5,
     "price": 100,
     "formato": "cd"
@@ -14,7 +14,7 @@ const movie =[
     "tittle": "titulo-2",
     "imgUrl": "https://cdn.culturagenial.com/es/imagenes/requiem.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 8,
     "price": 100,
     "format0": "cd"
@@ -24,7 +24,7 @@ const movie =[
     "tittle": "titulo-3",
     "imUrl": "https://pics.filmaffinity.com/R_quiem_por_un_sue_o-174867645-mmed.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 2,
     "price": 100,
     "formato": "cd"
@@ -34,7 +34,7 @@ const movie =[
     "tittle": "titulo-4",
     "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film", 
+    "genre": "film/drama/accion", 
     "stock": 1,
     "price": 100,
     "formato": "cd"
@@ -44,7 +44,7 @@ const movie =[
     "tittle": "titulo-5",
     "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "formato": "cd"
 },
 {
@@ -52,7 +52,7 @@ const movie =[
     "tittle": "titulo-6",
     "imgUrl":"https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 50,
     "price": 100,
     "formato": "cd"
@@ -62,7 +62,7 @@ const movie =[
     "tittle": "titulo-7",
     "imgUrl":"https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 50,
     "price": 100,
     "formato": "cd"
@@ -72,7 +72,7 @@ const movie =[
     "tittle": "titulo-8",
     "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 50,
     "price": 100,
     "formato": "cd"
@@ -82,7 +82,7 @@ const movie =[
     "tittle": "titulo-9",
     "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 50,
     "price": 100,
     "formato": "cd"
@@ -92,7 +92,7 @@ const movie =[
     "tittle": "titulo-10",
     "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
     "year":2000,
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 50,
     "price": 100,
     "formato": "cd"
@@ -101,7 +101,7 @@ const movie =[
     "id": 11,
     "tittle": "titulo-11",
     "imUrl": "https://www.ecartelera.com/carteles/3500/3515/001_m.jpg",
-    "genre": "film",
+    "genre": "film/drama/accion",
     "stock": 50,
     "price": 100,
     "formato": "cd"

@@ -2,23 +2,26 @@ import React from 'react';
 import './NavBar.scss';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import imgLogo from '../../multimedia/logo2.png';
+import {Link} from 'react-router-dom';
 
 function NavBar(){
     return(
         <nav className="nav">
-            <div className='brand'><img width="140" src={imgLogo} alt="logo tienda"/></div>
+            <div className='brand'>
+                <Link to="/"><img width="140" src={imgLogo} alt="logo tienda"/></Link>
+            </div>
             <ul>
                 <li className='menu'>
-                    <a href="/">Home</a>
+                    <Link to="/category/film">Home</Link>
                 </li>
                 <li className='menu'>
-                    <a href="/">Catalogo</a>
+                    <Link to="/category/accion">Catalogo</Link>
                 </li>
                 <li className='menu'>
-                    <a href="/">About us</a>
+                    <Link to="/drama">About us</Link>
                 </li>
                 <li className='menu'>
-                    <a href="/">Carrito de compras</a>
+                    <Link to="/">Carrito de compras</Link>
                 </li>
             </ul>
             <div><CartWidget/></div>
