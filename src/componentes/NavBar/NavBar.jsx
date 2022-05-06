@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.scss';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import imgLogo from '../../multimedia/logo2.png';
+import movie from '../data/movies';
 import {Link} from 'react-router-dom';
 
 function NavBar(){
@@ -10,20 +11,20 @@ function NavBar(){
             <div className='brand'>
                 <Link to="/"><img width="140" src={imgLogo} alt="logo tienda"/></Link>
             </div>
-            <ul>
+            <div>
                 <li className='menu'>
-                    <Link to="/category/film">Home</Link>
+                    <Link to="/category/drama">drama</Link>
                 </li>
                 <li className='menu'>
-                    <Link to="/category/accion">Catalogo</Link>
+                    <Link to="/category/accion">Accion</Link>
                 </li>
                 <li className='menu'>
-                    <Link to="/drama">About us</Link>
+                    <Link to="/category/comedia">comedia</Link>
                 </li>
                 <li className='menu'>
-                    <Link to="/">Carrito de compras</Link>
+                <Link to="/category/animada">animada</Link>
                 </li>
-            </ul>
+            </div>
             <div><CartWidget/></div>
         </nav>
     )

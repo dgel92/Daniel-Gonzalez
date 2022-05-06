@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 
 function Item({movie}){
@@ -11,7 +11,7 @@ function Item({movie}){
                     <h1>{movie.tittle}</h1>
                     <h3>{movie.genre}</h3>
                     <p> $ {movie.price}</p>
-                    <Link to= {`/item/${movie.id}`}><button className='button'>Ver mas</button></Link>
+                    <Link to= {`/movie/${movie.id}`}><button className='button'>Ver mas</button></Link>
                 </div>
             </div>
                 <hr/>
@@ -21,3 +21,4 @@ function Item({movie}){
 }
 
 export default Item
+

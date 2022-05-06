@@ -1,11 +1,12 @@
-import React from 'react'
-import Item from '../Item/Item'
+import React from 'react';
+import Item from '../Item/Item';
+import movie from '../data/movies'
 
 
-function ItemList( {movies} ) {
+function ItemList( {movie} ) {
     return (
         <>       
-        { movies.map(thismovie => {
+        {movie.map(thismovie => {
             return(
             <Item movie={thismovie} key={thismovie.id}/>
             )

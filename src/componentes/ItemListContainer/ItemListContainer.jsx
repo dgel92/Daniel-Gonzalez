@@ -1,44 +1,38 @@
-import React from 'react';
-import react, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './ItemListContainer.scss';
 import moviesDB from '../data/movies';
 import ItemList from '../ItemList/ItemList';
-import {useParams} from 'react-router-dom';
-import movie from '../data/movies';
+import { useParams } from 'react-router-dom';
 
 
-function getMovie(categoryid){
+function getMovies(idcategory){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (categoryid !== undefined){
-                const arrayFiltered = moviesDB.filter((movie) =>{
-                    return movie.genre === categoryid;
+            if (idcategory){
+                const arrayCategory = moviesDB.filter((movies) =>{
+                    return movies.genero === idcategory;
                 });
-                resolve(arrayFiltered);
+                resolve(arrayCategory);
             }
             else{
-            resolve(moviesDB);
+            return resolve(moviesDB);
             }
-        },500);
+        },700);
     });    
 }
 
-
-
 function ItemListContainer({}){
-    const [movie, setMovie] = useState([]);
-    const {categoryid}= useParams();    
-    
+    const [moviesEstado, setMovies] = useState([]);
+    const {idcategory} = useParams();    
     useEffect(() => {
-        getMovie(categoryid).then(respuestaPromise => {
-            setMovie(respuestaPromise[0]);
+        getMovies(idcategory).then( respuestaPromise => {
+            setMovies(respuestaPromise);
         });
-    }, []);
-
+    }, [idcategory]);
     return(
         <div className='main'>
             <div className='wrapper'>
-                <ItemList movie={movie}/>
+                <ItemList movie={moviesEstado}/>
             </div>
         </div>
     )
