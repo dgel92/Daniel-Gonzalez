@@ -1,14 +1,13 @@
 import React from 'react';
 import Item from '../Item/Item';
-import movie from '../data/movies'
+import portada from '../data/portada/portada';
 
-
-function ItemList( {movie} ) {
+function ItemList( {portada} ) {
     return (
         <>       
-        {movie.map(thismovie => {
+        {portada.map(thisportada => {
             return(
-            <Item movie={thismovie} key={thismovie.id}/>
+            <Item portada={thisportada} key={thisportada.id}/>
             )
         }) }
         </>

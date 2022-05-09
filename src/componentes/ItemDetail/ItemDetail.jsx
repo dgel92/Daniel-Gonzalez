@@ -1,25 +1,27 @@
 import React from "react";
-import moviesDB from "../data/movies";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.scss";
+import portada from '../data/portada/portada';
 
-function ItemDetail({movie}){
+function ItemDetail({portada}){
     return(
         <div className='wrapperDetail'>
             <div className='cardDetail'>
-                <div className='card_phDetail'><img alt= {movie.tittle} src={movie.imgUrl}/></div>
+                <div className='card_phDetail'><img alt= {portada.tittle} src={portada.imgUrl}/></div>
             </div>
             <div className='textDetail'>
                 <div>
-                    <h1>{movie.tittle}</h1>
-                    <h3>{movie.genre}</h3>
-                    <p> $ {movie.price}</p>
+                    <h1>{portada.tittle}</h1>
+                    <h3>{portada.genre}</h3>
+                    <p> $ {portada.precio}</p>
+                    <h6>{portada.categoria}</h6>
                 </div>
-                <ItemCount stock= {movie.stock} inicial={1}/>
+                <ItemCount stock= {portada.stock} inicial={1}/>
+
+                <div>
+                <p>(futura descripcion del producto)</p>
+                </div>
             </div>
-            
-                <hr/>
-                <br/>
         </div>
     )
 }

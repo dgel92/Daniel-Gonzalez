@@ -1,38 +1,38 @@
 import React, {useEffect, useState} from 'react';
 import './ItemListContainer.scss';
-import moviesDB from '../data/movies';
+import portadaDB from '../data/portada/portada';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
 
-function getMovies(idcategory){
+function getportada(categoryid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (idcategory){
-                const arrayCategory = moviesDB.filter((movies) =>{
-                    return movies.genero === idcategory;
+            if (categoryid){
+                const arrayFilterCategory = portadaDB.filter((portada) =>{
+                    return portada.categoria === categoryid;
                 });
-                resolve(arrayCategory);
+                resolve(arrayFilterCategory);
             }
             else{
-            return resolve(moviesDB);
+            return resolve(portadaDB);
             }
         },700);
     });    
 }
 
 function ItemListContainer({}){
-    const [moviesEstado, setMovies] = useState([]);
-    const {idcategory} = useParams();    
+    const [portadasEstado, setportada] = useState([]);
+    const {categoryid} = useParams();    
     useEffect(() => {
-        getMovies(idcategory).then( respuestaPromise => {
-            setMovies(respuestaPromise);
+        getportada(categoryid ).then( respuestaPromise => {
+            setportada(respuestaPromise);
         });
-    }, [idcategory]);
+    }, [categoryid]);
     return(
         <div className='main'>
             <div className='wrapper'>
-                <ItemList movie={moviesEstado}/>
+                <ItemList portada={portadasEstado}/>
             </div>
         </div>
     )

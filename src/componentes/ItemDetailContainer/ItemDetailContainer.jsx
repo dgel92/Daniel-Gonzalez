@@ -1,33 +1,33 @@
 import react, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import moviesDB from '../data/movies';
+import portadaDB from '../data/portada/portada';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 
-function getMovie(id){
+function getportada(portadaid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const movieFound = moviesDB.find((movie) => {
-                return id == movie.id
+            const portadaFound = portadaDB.find((portada) => {
+                return portada.id == portadaid
             })
-            resolve(movieFound);
+            resolve(portadaFound);
         },700);
     });    
 }
 
 function ItemDetailContainer({id}){
-    const [movie, setMovie] = useState([]); 
-    const {itemid} =useParams();  
+    const [portada, setPortada] = useState([]); 
+    const {portadaid} =useParams();  
     useEffect(() => {
-        getMovie(itemid).then(respuestaPromise => {
-            setMovie(respuestaPromise);
+        getportada(portadaid).then(respuestaPromise => {
+            setPortada(respuestaPromise);
         });
-    }, [itemid]);
+    }, [portadaid]);
 
     return(
         <div className='main'>
             <div className='wrapper'>
-                <ItemDetail movie={movie}/>
+                <ItemDetail portada={portada}/>
             </div>
         </div>
     )

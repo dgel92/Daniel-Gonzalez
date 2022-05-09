@@ -23,6 +23,13 @@ img, video {
     align-content: center;
 }
 
+.carousel{
+    display:flex;
+    height: 300px;
+    width: auto;
+    width: 100%;
+    border: 2px solid blue;
+}
 .card{
     width: 100%;
     max-width: 350px;
