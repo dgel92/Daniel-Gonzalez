@@ -13,9 +13,6 @@ function App(){
           <Route path="/" element={<ItemListContainer/>}/>
           <Route path="/category/:categoryid" element={<ItemListContainer titulo="categoria"/>}/>
           <Route path="/portada/:portadaid" element={<ItemDetailContainer titulo="detalle"/>}/>
-          <Route path="/componentesPC/:discosDurosMecanicos" element={<ItemListContainer titulo="detalle"/>}/>
-          <Route path="/portada/:discosSolidos" element={<ItemListContainer titulo="detalle"/>}/>
-          <Route path="/portada/:FuentesDePoder" element={<ItemListContainer titulo="detalle"/>}/>
         </Routes>
     </BrowserRouter>
     </div>

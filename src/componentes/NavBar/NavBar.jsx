@@ -2,7 +2,6 @@ import React from 'react';
 import './NavBar.scss';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import imgLogo from '../../multimedia/logo2.png';
-import portada from '../data/portada/portada';
 import {Link} from 'react-router-dom';
 import {
     Navbar,

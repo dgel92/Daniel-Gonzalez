@@ -1,21 +1,24 @@
 import React, {useEffect, useState} from 'react';
 import './ItemListContainer.scss';
-import portadaDB from '../data/portada/portada';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
+import totalProductos from '../data/componentesPc/totalProductos';
 
 
 function getportada(categoryid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (categoryid){
-                const arrayFilterCategory = portadaDB.filter((portada) =>{
+                const arrayFilterCategory = totalProductos.filter((portada) =>{
                     return portada.categoria === categoryid;
                 });
                 resolve(arrayFilterCategory);
             }
             else{
-            return resolve(portadaDB);
+                const arrayFilterCategory = totalProductos.filter((item) =>{
+                    return item.portada === true;
+            });
+            resolve(arrayFilterCategory);
             }
         },700);
     });    

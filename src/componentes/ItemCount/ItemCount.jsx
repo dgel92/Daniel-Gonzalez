@@ -23,8 +23,11 @@ export default function ItemCount(props){
                 <button className="contador-buttom-icons" onClick={handleAdd}>+</button>
             </div>
             <div className="contador-buttom-agregar">
-                <button>Agregar al carrito></button>
+                <button onClick={() => props.onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
     )
 }
+
+
+
