@@ -3,7 +3,7 @@ const totalProductos =[
         id: 1,
         tittle: "DISCO DURO HDD 1TB SEAGATE BARRACUDA SATA III",
         imgUrl: "https://www.venex.com.ar/products_images/1586464173_disc1.jpg",
-        categoria: ["almacenamiento", "discosMecanicos", "componentesPC"],
+        categoria: ["HDD", "discosMecanicos", "componentesPC"],
         portada: true,
         stock: 5,
         price: 5820,

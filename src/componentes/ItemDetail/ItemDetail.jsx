@@ -3,12 +3,16 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.scss";
 import {Link} from 'react-router-dom';
 import CartWidget from "../CartWidget/CartWidget";
+import useCartContext from "../store/cartContext/CartContext";
+
 
 function ItemDetail({portada}){
     const [isInCart, setIsInCart] = useState(false);
+    const {addToCard}=useCartContext();
     function onAdd(count){
-        console.log(`agregaste al carrito ${count} items`);
         setIsInCart(true);
+        addToCard(portada, count);
+        console.log("agregado al cart:", portada, count);
     }
 
     return(
@@ -34,3 +38,4 @@ function ItemDetail({portada}){
 )};
 
 export default ItemDetail
+ 

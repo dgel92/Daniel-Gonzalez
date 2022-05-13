@@ -3,6 +3,7 @@ import './NavBar.scss';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import imgLogo from '../../multimedia/logo2.png';
 import {Link} from 'react-router-dom';
+import useCartContext from "../store/cartContext/CartContext";
 import {
     Navbar,
     Container,
@@ -14,6 +15,9 @@ import {
 } from "react-bootstrap";
 
 function NavBar(){
+    
+    const {contextFunction} =useCartContext();
+    contextFunction();
     return(
     <Navbar bg="light" expand="lg">
         <Container fluid>
@@ -30,12 +34,12 @@ function NavBar(){
                 <NavDropdown.Item>< Link to="# ">TODOS</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="componentesPC/discosMecanicos">DISCOS DUROS MECANICOS></Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="componentesPC/discosSolidos">DISCOS SOLIDOS SD</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="componentesPC/fuentesDePoder">MEMORIA RAM</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="componentesPC/gabinetes">MICROPROCESADORES</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="componentesPC/memoriasRam">MOTHERBOARDS</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="componentesPC/motherBoard">PLACAS DE VIDEO</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="componentesPC/placasdeRed">GABINETES</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="componentesPC/procesadores">FUENTES DE PODER</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="componentesPC/memoriasRam">MEMORIA RAM</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="componentesPC/procesadores">MICROPROCESADORES</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="componentesPC/motherboards">MOTHERBOARDS</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="componentesPC/placasDeVideo">PLACAS DE VIDEO</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="componentesPC/gabinetes">GABINETES</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="componentesPC/fuentesDePoder">FUENTES DE PODER</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="componentesPC/refrigeracion">REFRIGERACION</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="componentesPC/placasDeRed">PLACAS DE RED</Link></NavDropdown.Item>
             </NavDropdown>
