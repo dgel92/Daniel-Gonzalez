@@ -40,9 +40,6 @@ const emptyCart=()=>{{
     cart([])
 }}
 
-
-
-
     const contextFunction = () => console.log("contexto listo");
     return(
         <Provider value={{contextFunction, cart, addToCard, removeFromCart}}>

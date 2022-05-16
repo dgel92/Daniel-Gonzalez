@@ -12,9 +12,9 @@ function App(){
         <BrowserRouter>
           <NavBar/>
             <Routes>
-              <Route path="/" element={<ItemListContainer/>}/>
+              <Route path="/" element={<ItemListContainer titulo="Inicio"/>}/>
               <Route path="/category/:categoryid" element={<ItemListContainer titulo="categoria"/>}/>
-              <Route path="/portada/:portadaid" element={<ItemDetailContainer titulo="detalle"/>}/>
+              <Route path="/items/:portadaid" element={<ItemDetailContainer titulo="detalle"/>}/>
             </Routes>
         </BrowserRouter>
       </CartContextProvider>

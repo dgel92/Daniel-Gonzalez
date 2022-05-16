@@ -1,33 +1,33 @@
 import react, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import totalProductos from '../data/componentesPc/totalProductos';
+import itemsDB from '../data/componentesPc/totalProductos';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 
-function getportada(portadaid){
+function getItem(itemid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const totalProductosFound = totalProductos.find((portada) => {
-                return portada.id == portadaid
+            const itemFound = itemsDB.find((item) => {
+                return item.id == itemid
             })
-            resolve(totalProductosFound);
+            resolve(itemFound);
         },700);
     });    
 }
 
 function ItemDetailContainer({id}){
-    const [portada, setPortada] = useState({categoria: []}); 
+    const [item, setItem] = useState({categoria: []}); 
     const {portadaid} =useParams();  
     useEffect(() => {
-        getportada(portadaid).then(respuestaPromise => {
-            setPortada(respuestaPromise);
+        getItem(portadaid).then(respuestaPromise => {
+            setItem(respuestaPromise);
         });
     }, [portadaid]);
 
     return(
         <div className='main'>
             <div className='wrapper'>
-                <ItemDetail portada={portada}/>
+                <ItemDetail item={item}/>
             </div>
         </div>
     )

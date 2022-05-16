@@ -1,12 +1,12 @@
 import React from 'react';
 import Item from '../Item/Item';
 
-function ItemList( {portada} ) {
+function ItemList( {items} ) {
     return (
         <>       
-        {portada.map(thisportada => {
+        {items.map(thisitems => {
             return(
-            <Item portada={thisportada} key={thisportada.id}/>
+            <Item items={thisitems} key={thisitems.id}/>
             )
         }) }
         </>

@@ -2,20 +2,20 @@ import React, {useEffect, useState} from 'react';
 import './ItemListContainer.scss';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import totalProductos from '../data/componentesPc/totalProductos';
+import itemsDB from '../data/componentesPc/totalProductos';
 
 
-function getportada(categoryid){
+function getitems(categoryid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (categoryid){
-                const arrayFilterCategory = totalProductos.filter((portada) =>{
-                    return portada.categoria === categoryid;
+                const arrayFilterCategory = itemsDB.filter((items) =>{
+                    return items.categoria.includes(categoryid);
                 });
                 resolve(arrayFilterCategory);
             }
             else{
-                const arrayFilterCategory = totalProductos.filter((item) =>{
+                const arrayFilterCategory = itemsDB.filter((item) =>{
                     return item.portada === true;
             });
             resolve(arrayFilterCategory);
@@ -25,17 +25,17 @@ function getportada(categoryid){
 }
 
 function ItemListContainer({}){
-    const [portadasEstado, setportada] = useState([]);
+    const [itemsEstado, setItems] = useState([]);
     const {categoryid} = useParams();    
     useEffect(() => {
-        getportada(categoryid ).then( respuestaPromise => {
-            setportada(respuestaPromise);
+        getitems(categoryid ).then( respuestaPromise => {
+            setItems(respuestaPromise);
         });
     }, [categoryid]);
     return(
         <div className='main'>
             <div className='wrapper'>
-                <ItemList portada={portadasEstado}/>
+                <ItemList items={itemsEstado}/>
             </div>
         </div>
     )

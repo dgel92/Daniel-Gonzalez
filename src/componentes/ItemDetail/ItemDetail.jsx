@@ -6,31 +6,31 @@ import CartWidget from "../CartWidget/CartWidget";
 import useCartContext from "../store/cartContext/CartContext";
 
 
-function ItemDetail({portada}){
+function ItemDetail({item}){
     const [isInCart, setIsInCart] = useState(false);
     const {addToCard}=useCartContext();
     function onAdd(count){
         setIsInCart(true);
-        addToCard(portada, count);
-        console.log("agregado al cart:", portada, count);
+        addToCard(item, count);
+        console.log("agregado al cart:", item, count);
     }
 
     return(
         <div className='wrapperDetail'>
             <div className='cardDetail'>
-                <div className='card_phDetail'><img alt= {portada.tittle} src={portada.imgUrl}/></div>
+                <div className='card_phDetail'><img alt= {item.tittle} src={item.imgUrl}/></div>
             </div>
             <div className='textDetail'>
                 <div>
-                    <h1>{portada.tittle}</h1>
-                    <h3>{portada.genre}</h3>
-                    <p> $ {portada.precio}</p>
-                    {portada.categoria.map((cat) =><Link to={"/categorias/" + cat}>{cat}</Link>)}
+                    <h1>{item.tittle}</h1>
+                    <h3>{item.genre}</h3>
+                    <p> $ {item.precio}</p>
+                    {item.categoria.map((cat) =><Link to={"/category/" + cat}>{cat}</Link>)}
 
                 {isInCart?
                 <button><Link to="category/CartWidget" onClick={CartWidget}>Finalizar compra y ir al carrito</Link></button>
                 :
-                <ItemCount onAdd={onAdd} stock= {portada.stock} inicial={1}/>
+                <ItemCount onAdd={onAdd} stock= {item.stock} inicial={1}/>
                 }
                 </div>
             </div>
@@ -38,4 +38,3 @@ function ItemDetail({portada}){
 )};
 
 export default ItemDetail
- 
