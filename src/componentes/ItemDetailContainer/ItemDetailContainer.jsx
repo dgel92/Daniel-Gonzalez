@@ -1,4 +1,4 @@
-import react, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import itemsDB from '../data/componentesPc/totalProductos';
 import ItemDetail from '../ItemDetail/ItemDetail';
@@ -8,7 +8,7 @@ function getItem(itemid){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const itemFound = itemsDB.find((item) => {
-                return item.id == itemid
+                return item.id == itemid;
             })
             resolve(itemFound);
         },700);
@@ -16,13 +16,15 @@ function getItem(itemid){
 }
 
 function ItemDetailContainer({id}){
-    const [item, setItem] = useState({categoria: []}); 
-    const {portadaid} =useParams();  
+
+    const [item, setItem] = useState();  
+    const {itemid} =useParams();
+
     useEffect(() => {
-        getItem(portadaid).then(respuestaPromise => {
+        getItem(itemid).then(respuestaPromise => {
             setItem(respuestaPromise);
         });
-    }, [portadaid]);
+    }, [itemid]);
 
     return(
         <div className='main'>

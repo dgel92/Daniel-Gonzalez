@@ -4,28 +4,27 @@ import { useContext,useState } from "react";
 
 const CartContext = createContext();
 const useCartContext =() => useContext(CartContext);
+
 const {Provider} = CartContext;
 
 export function CartContextProvider ({children}){
     const [cart, setCart] = useState([]);
-    
-    const isInCart =(id) =>{
-        return cart.some((item) => item.id === id);
-        };
 
     const addToCard =(item, cant)=>{
         if (isInCart(item.id)){
-            const newCart =cart.map(cartItem =>{
-                if (cartItem.id === item.id){
-                    const actualizarItem ={...cartItem};
-                    actualizarItem.cant += cant;
-                    return actualizarItem;
-                }
-            else
-                return cartItem;
-            })
+            const newCart =cart.map((cartItem)=>{
+                if(cartItem.id ===item.id){
+                    const copyItem={...cartItem};
+                    copyItem.cant += cant;
+                    return copyItem;
+                }else return cartItem;
+            });
             setCart(newCart);
-    }}
+        }else {
+            const newItem ={...item, cant};
+            setCart([...cart,newItem])
+        }
+    };
 
     const removeFromCart=(id)=>{
         const newCart=[...cart];
@@ -34,15 +33,45 @@ export function CartContextProvider ({children}){
         });
         setCart(cartFilter);
     }
+    
+    const isInCart =(id) =>{
+        return cart.some(itemCart => itemCart.id === id)
+        };
 
 
-const emptyCart=()=>{{
-    cart([])
-}}
+    const getItemFromCart =(id) =>{
+        return cart.find(itemCart => itemCart.id === id)
+        };
 
-    const contextFunction = () => console.log("contexto listo");
+const clearCart=()=>{
+    setCart([])
+}
+
+const cantInCart =() =>{
+    const total=0
+    cart.forEach(item=> total + item)
+    return total;
+}
+
+const calcPriceCart =()=>{
+    const total=0;
+    return total;
+}
+
+
+const contextFunction = () => console.log("contexto listo");
+
+
     return(
-        <Provider value={{contextFunction, cart, addToCard, removeFromCart}}>
+        <Provider value=
+                {{contextFunction,
+                cantInCart,
+                calcPriceCart,
+                cart,
+                getItemFromCart,
+                addToCard,
+                removeFromCart,
+                clearCart}}>
             {children}
         </Provider>
     )
