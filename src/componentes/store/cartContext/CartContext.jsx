@@ -48,14 +48,15 @@ const clearCart=()=>{
 }
 
 const cantInCart =() =>{
-    const total=0
-    cart.forEach(item=> total + item)
-    return total;
+    let cant = 0
+        cart.forEach((itemCart) => cant += itemCart.cant)
+        return cant
 }
 
 const calcPriceCart =()=>{
-    const total=0;
-    return total;
+    let total = 0
+    cart.forEach((itemCart) => total += (itemCart.cant*itemCart.price))
+    return total
 }
 
 

@@ -197,7 +197,7 @@ const items =[
         id: 21,
         tittle: "PLACA DE RED USB TP-LINK TL-WN725N NANO WIFI 150M",
         imgUrl: "https://www.venex.com.ar/products_images/a.jpg",
-        categoria: ["placasDeRed","conectividad","componentesPC"],
+        categoria: ["placasDeRed", "conectividad","componentesPC"],
         portada: false,
         stock: 5,
         price: 1149,

@@ -8,15 +8,13 @@ function Item({items}){
             <div className='card_ph'><img alt= {items.tittle} src={items.imgUrl}/></div>
                 <div className='card_text'>
                     <h1>{items.tittle}</h1>
-                    <p> $ {items.precio}</p>
-                    <h7>{items.categoria}</h7>
+                    <h3> $ {items.price}</h3>
+                    <h6>{items.categoria}</h6>
+                    <p>Stock ={items.stock}</p>
                     <hr/>
-                    <br/>
-                    <Link to= {`/items/${items.id}`}><button className='button'>Ver mas</button></Link>
+                    <Link to= {`/items/${items.id}`}><button className='buttonVermas'>Ver mas</button></Link>
                 </div>
             </div>
-                <hr/>
-                <br/>
         </div>
     )
 }

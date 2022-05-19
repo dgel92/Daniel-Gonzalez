@@ -21,13 +21,20 @@ function ItemDetail({item}){
     return(
         <div className='wrapperDetail'>
             <div className='cardDetail'>
+                <h4>{item.tittle}</h4>
                 <div className='card_phDetail'><img alt= {item.tittle} src={item.imgUrl}/></div>
             </div>
             <div className='textDetail'>
                 <div>
-                    <h1>{item.tittle}</h1>
-                    <p> ${item.precio}</p>
-                    {item.categoria.map((cat) =><Link to={"/category/" + cat}>{cat}</Link>)}
+                    <h2>Precio ${item.price}</h2>
+                    <br></br>
+                    <h4> Stock={item.stock}</h4>
+                    <br></br>
+                    <br></br>
+                    <h6>Productos similares</h6>
+                        <div className="productosSimilares">
+                            {item.categoria.map((cat) =><Link to={"/category/" + cat}><><button className="productosSimilares_text">{cat}</button></></Link>)}
+                        </div>
 
                 {isInCart?
                 <button><Link to="/cart" onClick={CartWidget}>Ir al carrito</Link></button>

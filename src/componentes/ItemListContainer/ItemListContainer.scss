@@ -32,9 +32,11 @@ img, video {
 }
 .card{
     width: 100%;
+    height: 600px;
     max-width: 350px;
-    box-shadow: grey 0px 4px 12px;
+    box-shadow: 8px 5px 2px rgba(199, 199, 199, 0.336);
     flex-direction: column;
+
 
     &_ph{
         display: block;
@@ -62,7 +64,18 @@ img, video {
 }
 }
 
+.buttonVermas{
+    border:1px solid rgba(54, 54, 54, 0.76);
+    height: 30px;
+    width: 80px;
+    border-radius: 7.5px;
+    color: rgba(54, 54, 54, 0.76);
+}
 
+.buttonVermas:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(158, 157, 157, 0.342);
+}
 
 
 @media (min-width: 750px) {

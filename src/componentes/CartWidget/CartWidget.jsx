@@ -4,14 +4,14 @@ import cartWidget from '../../multimedia/carro-de-la-compra.png';
 import useCartContext from '../store/cartContext/CartContext';
 
     function CartWidget(){
-        const {calcPriceCart}=useCartContext();
+        const {cantInCart}=useCartContext();
     return(
         <div value = {{size: 40}}>
             <div className='cartwidget'>
                 <div>
                     <img width="80" src={cartWidget} alt="Carrito-de-compras"/>
                 </div>
-                <div>Carrito{calcPriceCart()}</div>
+                <div>Carrito{cantInCart()}</div>
             </div>
         </div>
     )

@@ -14,12 +14,13 @@ import {
     Button,
 } from "react-bootstrap";
 
+
 function NavBar(){
     
     const {contextFunction} =useCartContext();
     contextFunction();
     return(
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="xl" variant="primary" className="mx-0" > 
         <Container fluid>
         <Navbar.Brand><Link to="/"><img width="120" src={imgLogo} alt="logo tienda"/></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -115,9 +116,6 @@ function NavBar(){
         </NavDropdown>
         <Nav.Link to="category/imperdibles">!Imperdibles¡</Nav.Link>
         <Nav.Link href="category/notebooks">Notebooks</Nav.Link>
-        <Nav.Link href="#" disabled>
-            Link
-        </Nav.Link>
         </Nav>
         <Form className="d-flex">
         <FormControl
