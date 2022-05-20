@@ -9,9 +9,9 @@ import useCartContext from '../store/cartContext/CartContext';
         <div value = {{size: 40}}>
             <div className='cartwidget'>
                 <div>
-                    <img width="80" src={cartWidget} alt="Carrito-de-compras"/>
+                    <img width="60" src={cartWidget} alt="Carrito-de-compras"/>
                 </div>
-                <div>Carrito{cantInCart()}</div>
+                <div className='carrito'>{cantInCart()}</div>
             </div>
         </div>
     )

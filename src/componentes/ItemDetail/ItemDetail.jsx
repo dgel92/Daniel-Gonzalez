@@ -2,17 +2,18 @@ import React, {useState} from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.scss";
 import {Link} from 'react-router-dom';
-import CartWidget from "../CartWidget/CartWidget";
 import useCartContext from "../store/cartContext/CartContext";
+import CartView from "../store/cartView/CartView";
 
 
 function ItemDetail({item}){
     const [isInCart, setIsInCart] = useState(false);
     const {addToCard}=useCartContext();
+
     function onAdd(count){
-        setIsInCart(true);
+        setIsInCart(count);
+        console.log(`se agrego ${count} de items del producto${item.name}`)
         addToCard(item, count);
-        console.log("agregado al cart:", item, count);
     };
     if (!item){
         return <h4> Cargando...</h4>
@@ -32,12 +33,9 @@ function ItemDetail({item}){
                     <br></br>
                     <br></br>
                     <h6>Productos similares</h6>
-                        <div className="productosSimilares">
-                            {item.categoria.map((cat) =><Link to={"/category/" + cat}><><button className="productosSimilares_text">{cat}</button></></Link>)}
-                        </div>
 
                 {isInCart?
-                <button><Link to="/cart" onClick={CartWidget}>Ir al carrito</Link></button>
+                <button><Link to="/cart" onClick={CartView}>Ir al carrito</Link></button>
                 :
                 <ItemCount onAdd={onAdd} stock= {item.stock} inicial={1}/>
     }

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 function CartView(){
 const {cart, removeFromCart, clearCart}=useCartContext();
-console.log("CART",cart);
+console.log("cart",cart);
     if (cart.length === 0){    
         return(
             <div>

@@ -1,19 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import itemsDB from '../data/componentesPc/totalProductos';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import {getItem as getItemDetail} from '../data/database';
 
-
-function getItem(itemid){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const itemFound = itemsDB.find((item) => {
-                return item.id == itemid;
-            })
-            resolve(itemFound);
-        },700);
-    });    
-}
 
 function ItemDetailContainer({id}){
 
@@ -21,7 +10,7 @@ function ItemDetailContainer({id}){
     const {itemid} =useParams();
 
     useEffect(() => {
-        getItem(itemid).then(respuestaPromise => {
+        getItemDetail (itemid).then(respuestaPromise => {
             setItem(respuestaPromise);
         });
     }, [itemid]);
