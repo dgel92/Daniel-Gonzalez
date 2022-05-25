@@ -2,6 +2,7 @@ import React from 'react';
 import './CartWidget.scss';
 import cartWidget from '../../multimedia/carro-de-la-compra.png';
 import useCartContext from '../store/cartContext/CartContext';
+import { Link } from 'react-router-dom';
 
     function CartWidget(){
         const {cantInCart}=useCartContext();
@@ -9,7 +10,9 @@ import useCartContext from '../store/cartContext/CartContext';
         <div value = {{size: 40}}>
             <div className='cartwidget'>
                 <div>
+                <Link to={"/cart"}>
                     <img width="60" src={cartWidget} alt="Carrito-de-compras"/>
+                </Link>
                 </div>
                 <div className='carrito'>{cantInCart()}</div>
             </div>
@@ -18,4 +21,3 @@ import useCartContext from '../store/cartContext/CartContext';
 }
 
 export default CartWidget
-

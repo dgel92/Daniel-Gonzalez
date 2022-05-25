@@ -3,10 +3,9 @@ import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import {getItem as getItemDetail} from '../data/database';
 
+function ItemDetailContainer({}){
 
-function ItemDetailContainer({id}){
-
-    const [item, setItem] = useState();  
+    const [item, setItem] = useState({categoria: []});  
     const {itemid} =useParams();
 
     useEffect(() => {

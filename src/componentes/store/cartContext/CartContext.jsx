@@ -1,15 +1,20 @@
 import { createContext} from "react";
 import { useContext,useState } from "react";
 
-
 const CartContext = createContext();
 const useCartContext =() => useContext(CartContext);
 
 const {Provider} = CartContext;
 
 export function CartContextProvider ({children}){
+
+    //Estado para guardar datos en el carrito//
     const [cart, setCart] = useState([]);
 
+
+
+
+    //Agregar items al estado//
     const addToCard =(item, cant)=>{
         if (isInCart(item.id)){
             const newCart =cart.map((cartItem)=>{
@@ -26,6 +31,15 @@ export function CartContextProvider ({children}){
         }
     };
 
+
+
+
+
+
+
+
+
+    
     const removeFromCart=(id)=>{
         const newCart=[...cart];
         const cartFilter=newCart.filter(item=>{

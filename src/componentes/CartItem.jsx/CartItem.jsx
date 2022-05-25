@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react'
 import { useCartContext } from '../cartContext/CartContext';
 
@@ -28,5 +29,4 @@ const CartItem = ({item}) => {
         </>
     )
 }
-
 export default CartItem

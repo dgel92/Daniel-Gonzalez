@@ -33,9 +33,11 @@ function ItemDetail({item}){
                     <br></br>
                     <br></br>
                     <h6>Productos similares</h6>
-
+                <div className="productosSimilares">
+                {item.categoria.map((cat) =><Link to={"/categoria/" + cat}>{cat}</Link>)}
+                </div>
                 {isInCart?
-                <button><Link to="/cart" onClick={CartView}>Ir al carrito</Link></button>
+                <Link to="/cart">Ir al carrito</Link>
                 :
                 <ItemCount onAdd={onAdd} stock= {item.stock} inicial={1}/>
     }

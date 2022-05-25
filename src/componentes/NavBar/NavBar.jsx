@@ -33,7 +33,7 @@ function NavBar(){
         <NavDropdown title="CATEGORIAS" id="navbarScrollingDropdown">
             <NavDropdown title="COMPONENTES DE PC" id="navbarScrollingDropdown">
                 <NavDropdown.Item>< Link to="# ">TODOS</Link></NavDropdown.Item>
-                <NavDropdown.Item><Link to="category/discosMecanicos">DISCOS DUROS MECANICOS></Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="category/discosMecanicos">DISCOS DUROS MECANICOS</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="category/discosSolidos">DISCOS SOLIDOS SD</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="category/memoriasRam">MEMORIA RAM</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="category/procesadores">MICROPROCESADORES</Link></NavDropdown.Item>
@@ -45,7 +45,7 @@ function NavBar(){
                 <NavDropdown.Item><Link to="category/placasDeRed">PLACAS DE RED</Link></NavDropdown.Item>
             </NavDropdown>
             
-            <NavDropdown.Item><Link to="componentes/notebooks">NOTEBOOKs></Link></NavDropdown.Item>
+            <NavDropdown.Item><Link to="componentes/notebooks">NOTEBOOKs</Link></NavDropdown.Item>
 
             <NavDropdown title="PERIFERICOS" id="navbarScrollingDropdown">                
                 <NavDropdown.Item><Link to="category/todos">TODOS</Link></NavDropdown.Item>

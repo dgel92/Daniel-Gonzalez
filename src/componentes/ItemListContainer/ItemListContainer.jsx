@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './ItemListContainer.scss';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-import {getAllItems as getitems, getItemByCategory} from '../data/database/index';
+import {getAllItems as getitems, getItemByCategory, dataToFirebase} from '../data/database/index';
 
 
 

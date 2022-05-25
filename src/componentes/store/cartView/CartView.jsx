@@ -1,9 +1,33 @@
 import React from "react"
 import useCartContext from '../cartContext/CartContext';
 import {Link} from 'react-router-dom';
+import {createBuyOrder} from '../../data/database/index'
 
 function CartView(){
-const {cart, removeFromCart, clearCart}=useCartContext();
+const {cart, removeFromCart, calcPriceCart, clearCart}=useCartContext();
+
+function handleBuy(){
+    const itemsToBuy = cart.map((itemCart)=>({
+        title: itemCart.tittle,
+        cant: itemCart.cant,
+        price: itemCart.price,
+        id: itemCart.id,
+        
+
+        }
+    ))
+    const buyOrder ={
+        buyer:{
+            name: "daniel",
+            phone:"sxjakdsjak",
+            email:"jaskdjiasjda",
+        },
+        items: [itemsToBuy],
+        total: calcPriceCart,
+    }
+    createBuyOrder(buyOrder);
+}
+
 console.log("cart",cart);
     if (cart.length === 0){    
         return(
@@ -24,7 +48,7 @@ console.log("cart",cart);
                     </div>
                     })}
                     <button onClick={clearCart}>Vaciar Carrito</button>
-                <Link to="/">finalizar compra</Link>
+                <Link to="/checkout"><button>FInalizar Compra</button></Link>
             </div>
     }
 }
