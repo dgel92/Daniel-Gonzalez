@@ -31,15 +31,6 @@ export function CartContextProvider ({children}){
         }
     };
 
-
-
-
-
-
-
-
-
-    
     const removeFromCart=(id)=>{
         const newCart=[...cart];
         const cartFilter=newCart.filter(item=>{

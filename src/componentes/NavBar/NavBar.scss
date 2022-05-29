@@ -1,64 +1,108 @@
-* {
-    margin: 0;
-    padding: 0;
-    color: inherit;
-    box-sizing: border-box;
-    list-style:none;
-    text-decoration: none;
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+.nav li{
+    display:block;
+    padding: 10px 10px;
+    border-radius: 10px;
     
 }
 
-$theme-colors: (
-    "info": tomato,
-    "danger": teal,
-    "dark": black,
-);
-.nav {
-    margin: 0;
-    padding-top: 2vh;
-    padding-bottom: 2.5vh;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(19, 19, 165, 0.705);
-    font-size: 1.4rem;
-    justify-content: space-evenly;
-    background-color: bisque;
-
+.nav li:hover{
+    background-color:blue;
 }
 
-.brand{
-    color: rgb(255, 255, 255);
-    background-color: rgba(207, 126, 32, 0.705);
-    border-radius: 15px;
+.nav>li{
+    float:left;
+}
+
+.nav li ul{
+    display:none;
+    position: absolute;
+    min-width: 20px;
+    z-index: 1;
+}
+
+.nav li:hover> ul{
+    display:block;
+}
+
+.nav li ul li{
+    position: relative;
+}
+
+.nav li ul li ul {
+    left: 24.7vh;
+    top: 0px;
+    border:2px solid rgb(255, 0, 255)  ;
+}
+
+
+.desplegable{
+    border:3px solid orange;
     display:flex;
-    height: auto;
-    width: auto;
+    left: 23vh;
+    top: 13.5vh;
+
+    & li ul li ul link{
+        left: 200px;
+
+    }
+}
+
+
+
+
+.header{
+    display:flex;
+    margin-left:9%;
     align-items: center;
-    justify-content: center;
-    margin-right: 30%;
+    height: 20vh;
+    width: 82%;
+    border: 2px solid blue;
 }
 
-.brand:hover{
-    color: rgb(255, 255, 255);
-    background-color: rgba(150, 91, 24, 0.705);
+.logo{
+    display:flex;
+    width: 100%;
+    border: 2px solid green;
+
 }
 
 
-.menu{
-    display: inline-flex;
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
-    height:50px;
-    width: 200px;
-    align-items: center;
-    margin-top: 40px;
-    justify-content: center;
-    margin-left: 30px;
-    border-radius: 20px;
-    background-color: rgba(207, 126, 32, 0.705);
+.logo_img{
+    display:flex;
+    border:2px solid blue;
+    margin-left: 40%;
+    margin-right: 38%
 }
 
-.menu:hover {
-    color: rgba(163, 163, 163, 0.651);
-    background-color: rgba(150, 91, 24, 0.705);
+
+.carrito{
+    border: 2px solid red;
+}
+
+.categorias{
+    display:flex;
+    border: 2px solid green;
+    margin-left: 5vh;
+}
+nav{
+    .menu{
+        li{
+            &.active{
+
+            }
+            &:hover{
+
+            }
+
+        }
+    }
 }

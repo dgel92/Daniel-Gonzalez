@@ -1,6 +1,7 @@
 
 import React, { useContext } from 'react'
 import { useCartContext } from '../cartContext/CartContext';
+import './CartItem.scss';
 
 const CartItem = ({item}) => {
 
@@ -16,7 +17,7 @@ const CartItem = ({item}) => {
                     </div>
                     <div className='col-md-8'>
                         <div className='card-body'>
-                            <h5 className='card-title'>{item.name}</h5>
+                            <h5 className='card-title'>{item.tittle}</h5>
                             <p className='card-text'>Cantidad: {item.amount}</p>
                             <p className='card-text'>Precio unitario: {item.price}</p>
                             <p className='card-text'>Precio: {item.price * item.amount}</p>
@@ -30,3 +31,4 @@ const CartItem = ({item}) => {
     )
 }
 export default CartItem
+

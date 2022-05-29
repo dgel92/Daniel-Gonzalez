@@ -1,0 +1,54 @@
+.cartView{
+    display:flex;
+    flex-flow: column nowrap;
+    border: 2px solid red;
+    width: 82%;
+    height: 100vh;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    margin-left:9%;
+
+    
+}
+.container{
+    display:flex;
+    flex-flow: column nowrap;
+    margin-bottom: 2vh;
+    border: 2px solid blue;
+    width: 82%;
+    height: auto;
+
+        h2{
+            display:flex;
+            height: auto;
+            width: 100%;
+        }       
+}
+
+.precio{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5vh;
+        
+        h3{
+            font-size: 1.2rem;
+        }
+
+        h4{
+            font-size: 1rem;
+        }
+
+}
+
+.buttonEliminar{
+    width: 4vh;
+    height: 3.5vh;
+    border-radius: 8px;
+
+    &:hover{
+        color:red;
+        background-color: rgba(136, 136, 136, 0.5);
+
+    }
+}
