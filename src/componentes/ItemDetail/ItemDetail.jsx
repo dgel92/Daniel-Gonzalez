@@ -34,7 +34,7 @@ function ItemDetail({item}){
                     <br></br>
                     <h6>Productos similares</h6>
                 <div className="productosSimilares">
-                {item.categoria.map((cat) =><Link to={"/categoria/" + cat}>{cat}</Link>)}
+                {item.categoria.map((cat) =><Link to={"/category/" + cat}>{cat}</Link>)}
                 </div>
                 {isInCart?
                 <Link to="/cart">Ir al carrito</Link>

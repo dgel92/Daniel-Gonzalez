@@ -28,6 +28,7 @@ const Checkout = () => {
     }
 
     const generateOrder = async (queryiItems) => {
+        console.log("genOrder", queryiItems)
         setLoad(true)
         try {
             const miColec = collection(firestoreDB,"items")
@@ -46,9 +47,9 @@ const Checkout = () => {
         const items = cart.map(e=> 
             {return {
                 id:e.id,
-                title:e.name,
+                tittle:e.tittle,
                 price:e.price,
-                amount:e.amount
+                cant:e.cant,
             }})
 
         const total = calcPriceCart()
@@ -66,7 +67,7 @@ const Checkout = () => {
             
             {load ? <Spinner />
                 : (!orderID&&<div>
-                    <h4>Completar Datos:</h4>
+                    <h4>Completar Datos:</h4>\
                     <br />
                     <form onSubmit={handleSubmit}>
                         <input

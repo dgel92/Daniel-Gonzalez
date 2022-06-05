@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc, getDocs, query, where, collection, setDoc, Timestamp,} from 'firebase/firestore/lite'
+import { getFirestore, doc, getDoc, getDocs, query, where, collection, setDoc, Timestamp} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyACZSI1K6AgmobhIpocmSn3F4iIuz0XHb8",
@@ -32,9 +32,13 @@ export async function getAllItems(){
 
 export async function getItemByCategory(categoryId){
     const miColec = collection(firestoreDB, 'items');
-    const queryiItems = query(miColec, where("categoria","==", categoryId));
+    //const queryiItems = query(miColec, where("categoria","==", categoryId));
+    const queryiItems = query(miColec, where("categoria", "array-contains", categoryId));
 
-    const itemsSnap = await getDoc(queryiItems);
+
+
+
+    const itemsSnap = await getDocs(queryiItems);
     return itemsSnap.docs.map(doc=>{
         return{
             ...doc.data(),

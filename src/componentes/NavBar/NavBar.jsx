@@ -30,8 +30,8 @@ function NavBar(){
                                     <li><Link to="category/placasDeRed">PLACAS DE RED</Link></li>
                                 </ul>
                             </li>
-                            <li title="Notebooks" className="active"><Link to="componentes/notebooks">Notebooks</Link></li>
-                            <li title="Perifericos" className="active"> <Link to="componentes/perifericos">Perifericos</Link>
+                            <li title="Notebooks" className="active"><Link to="category/notebooks">Notebooks</Link></li>
+                            <li title="Perifericos" className="active"> <Link to="category/perifericos">Perifericos</Link>
                                 <ul>
                                     <li><Link to="category/todos">TODOS</Link></li>
                                     <li><Link to="category/teclados">TECLADOS</Link></li>
@@ -81,8 +81,8 @@ function NavBar(){
                                     <li><Link to="category/cables">CABLES</Link></li>
                                 </ul>
                             </li>
-                            <li title="Soportes" className="active"><Link to="componentes/soportes">Soportes</Link></li>
-                            <li title="ESTABILIZADORES, UPS Y ZAPATILLAS" className="active"><Link to="componentes/estabilizadores">Estabilizadores y UPs</Link>
+                            <li title="Soportes" className="active"><Link to="category/soportes">Soportes</Link></li>
+                            <li title="ESTABILIZADORES, UPS Y ZAPATILLAS" className="active"><Link to="category/estabilizadores">Estabilizadores y UPs</Link>
                                 <ul>
                                     <li><Link to="category/todos">TODOS</Link></li>
                                     <li><Link to="category/estabilizadores">ESTABILIZADORES</Link></li>
