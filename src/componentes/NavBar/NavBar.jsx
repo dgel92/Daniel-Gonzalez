@@ -18,7 +18,6 @@ function NavBar(){
                         <ul className="desplegable">
                             <li><Link to="# " className="active link" title="COMPONENTES DE PC">Componentes</Link>
                                 <ul>
-                                    <li><Link to="# " className="active link">TODOS</Link></li>
                                     <li><Link to="category/discosSolidos" className="link">DISCOS SOLIDOS SD</Link></li>
                                     <li><Link to="category/memoriasRam" className="link">MEMORIA RAM</Link></li>
                                     <li><Link to="category/procesadores" className="link">MICROPROCESADORES</Link></li>
@@ -33,7 +32,6 @@ function NavBar(){
                             <li title="Notebooks"><Link to="category/notebooks" className="active link">Notebooks</Link></li>
                             <li title="Perifericos"> <Link to="category/perifericos" className="active link">Perifericos</Link>
                                 <ul>
-                                    <li><Link to="category/todos" className="link">Todos</Link></li>
                                     <li><Link to="category/teclados" className="link">Teclados</Link></li>
                                     <li><Link to="category/mousepads" className="link">Mousepads</Link></li>
                                     <li><Link to="category/mouse" className="link">Mouses</Link></li>
@@ -47,7 +45,6 @@ function NavBar(){
                             <li title="Proyectores"><Link to="category/proyectores" className="active link">Proyectores y Pantallas</Link></li>               
                             <li title="AlMACENAMIENTO"><Link to="category/almacenamiento" className="active link">Almacenamiento</Link>
                                 <ul>
-                                    <li><Link to="category/todos" className="link">Todos</Link></li>
                                     <li><Link to="category/memoriaFlash" className="link">Memoria Flahs</Link></li>
                                     <li><Link to="category/pendrives" className="link">Pendrives</Link></li>
                                     <li><Link to="category/discosExternos" className="link">Discos Externos</Link></li>
@@ -56,7 +53,6 @@ function NavBar(){
                             <li title="Impresoras"><Link to="category/impresionYScanners" className="active link">Impresion y Scanners</Link></li>
                             <li title="CONECTIVIDAD Y REDES"><Link to="category/conectividad" className="active link">Conectividad y redes</Link>
                             <ul>
-                                <li><Link to="category/todos" className="link">Todos</Link></li>
                                 <li><Link to="category/accesPoint" className="link">Acces Point</Link></li>
                                 <li><Link to="category/modemRouter" className="link">Modem Router</Link></li>
                                 <li><Link to="category/router" className="link">Mouter</Link></li>
@@ -67,7 +63,6 @@ function NavBar(){
                             <li title="Tablets"><Link to="category/tablets" className="active link">Tablets</Link></li>
                             <li title="CELULARES Y TELEFONIA"><Link to="category/celulares" className="active link">Celulares y telefonia</Link>
                                 <ul>
-                                    <li><Link to="category/todos" className="link">Todos</Link></li>
                                     <li><Link to="category/celulares" className="link">Celulares</Link></li>
                                     <li><Link to="category/modemRouter" className="link">Modem Router</Link></li>
                                     <li><Link to="category/telefonosFijos" className="link">Telefonos Fijos</Link></li>
@@ -76,7 +71,6 @@ function NavBar(){
                             </li>
                             <li title="ACCESORIOS Y CABLES"><Link to="category/Accesorios" className="active link">Accesorios</Link>
                                 <ul>
-                                    <li><Link to="category/todos" className="link">TODOS</Link></li>
                                     <li><Link to="category/cargadores" className="link">CARGADORES</Link></li>
                                     <li><Link to="category/cables" className="link">CABLES</Link></li>
                                 </ul>
@@ -84,7 +78,6 @@ function NavBar(){
                             <li title="Soportes"><Link to="category/soportes" className="active link">Soportes</Link></li>
                             <li title="ESTABILIZADORES, UPS Y ZAPATILLAS"><Link to="category/estabilizadores" className="active link">Estabilizadores y UPs</Link>
                                 <ul>
-                                    <li><Link to="category/todos" className="link">TODOS</Link></li>
                                     <li><Link to="category/estabilizadores" className="link">Estabilizadores</Link></li>
                                     <li><Link to="category/ups" className="link">UPS</Link></li>
                                     <li><Link to="category/zapatillas" className="link">Zapatillas</Link></li>
