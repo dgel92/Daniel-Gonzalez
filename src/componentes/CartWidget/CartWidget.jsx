@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
             <div className='cartwidget'>
                 <div>
                 <Link to={"/cart"}>
-                    <img width="60" src={cartWidget} alt="Carrito-de-compras"/>
+                    <img width="80" src={cartWidget} alt="Carrito-de-compras"/>
                 </Link>
                 </div>
                 <div className='carrito'>{cantInCart()}</div>

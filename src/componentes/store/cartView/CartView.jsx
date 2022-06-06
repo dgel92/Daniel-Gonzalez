@@ -32,9 +32,9 @@ function handleBuy(){
 console.log("cart",cart);
     if (cart.length === 0){    
         return(
-            <div>
+            <div className="SinItem">
                 <h4>No hay items en el carrito</h4>
-                <Link to="/">Volver al catalogo</Link>
+                <Link to="/" className="retornotext">Volver al catalogo</Link>
             </div>
         )
     }
@@ -52,17 +52,11 @@ console.log("cart",cart);
                                 </div>                       
                         </div>
                     })}
-                    <button onClick={clearCart}>Vaciar Carrito</button>
-                <Link to="/checkout"><button>FInalizar Compra</button></Link>
+                    <button onClick={clearCart} className="vaciarcarro">Vaciar Carrito</button>
+                <Link to="/checkout" className="checkout"><button>Finalizar Compra</button></Link>
             </div>
     }
 }
 
 
 export default CartView
-
-//<h5 className='card-title'>{item.tittle}</h5>
-//<p className='card-text'>Cantidad: {item.amount}</p>
-//<p className='card-text'>Precio unitario: {item.price}</p>
-//<p className='card-text'>Precio: {item.price * item.amount}</p>
-//<button className='btn btn-warning' onClick={()=>removeItem(item.id)}>Eliminar Producto</button>/*

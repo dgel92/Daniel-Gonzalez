@@ -4,6 +4,7 @@ import useCartContext from '../store/cartContext/CartContext';
 import { collection, addDoc} from "firebase/firestore";
 import firestoreDB from '../data/database/index';
 import Spinner from '../Spinner/spinner';
+import './checkout.scss';
 
 
 const Checkout = () => {
@@ -61,13 +62,15 @@ const Checkout = () => {
     }
 
     return (
-        <>
+        <>  
+            <div className="Bienvenido">
             <h1>Finalizando Compra</h1>
+            </div>
             <hr />
             
             {load ? <Spinner />
-                : (!orderID&&<div>
-                    <h4>Completar Datos:</h4>\
+                : (!orderID&&<div className="formulario">
+                    <h4>Completar Datos:</h4>
                     <br />
                     <form onSubmit={handleSubmit}>
                         <input
@@ -109,10 +112,10 @@ const Checkout = () => {
             <div>
             {
                 orderID&&(
-                    <div>
+                    <div className="respuestaOrden">
                         <h4>Compra Finalizada con Exito</h4>
                         <h4>{`Su código de compra es: ${orderID}`}</h4>
-                        <Link to="/"><h5>Realizar otra compra</h5></Link>
+                        <Link to="/" className="orden"><h5>Realizar otra compra</h5></Link>
                     </div>
                     )
             }

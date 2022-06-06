@@ -15,7 +15,6 @@ img, video {
 
 .wrapper{
     display: flex;
-    border: 2px solid red;
     flex-direction: column;
     align-items: center;
     gap: 40px;
@@ -65,7 +64,10 @@ img, video {
 }
 
 .buttonVermas{
+    display:flex-end;
     border:1px solid rgba(54, 54, 54, 0.76);
+    position: relative;
+    left: 23vh;
     height: 30px;
     width: 80px;
     border-radius: 7.5px;

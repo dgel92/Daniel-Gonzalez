@@ -16,93 +16,92 @@ function NavBar(){
                 <ul className="nav menu">
                     <li className="categorias">Categorias
                         <ul className="desplegable">
-                            <li><Link to="# " className="active" title="COMPONENTES DE PC">Componentes</Link>
+                            <li><Link to="# " className="active link" title="COMPONENTES DE PC">Componentes</Link>
                                 <ul>
-                                    <li><Link to="# " className="active">TODOS</Link></li>
-                                    <li><Link to="category/discosSolidos">DISCOS SOLIDOS SD</Link></li>
-                                    <li><Link to="category/memoriasRam">MEMORIA RAM</Link></li>
-                                    <li><Link to="category/procesadores">MICROPROCESADORES</Link></li>
-                                    <li><Link to="category/motherboards">MOTHERBOARDS</Link></li>
-                                    <li><Link to="category/placasDeVideo">PLACAS DE VIDEO</Link></li>
-                                    <li><Link to="category/gabinetes">GABINETES</Link></li>
-                                    <li><Link to="category/fuentesDePoder">FUENTES DE PODER</Link></li>
-                                    <li><Link to="category/refrigeracion">REFRIGERACION</Link></li>
-                                    <li><Link to="category/placasDeRed">PLACAS DE RED</Link></li>
+                                    <li><Link to="# " className="active link">TODOS</Link></li>
+                                    <li><Link to="category/discosSolidos" className="link">DISCOS SOLIDOS SD</Link></li>
+                                    <li><Link to="category/memoriasRam" className="link">MEMORIA RAM</Link></li>
+                                    <li><Link to="category/procesadores" className="link">MICROPROCESADORES</Link></li>
+                                    <li><Link to="category/motherboards" className="link">MOTHERBOARDS</Link></li>
+                                    <li><Link to="category/placasDeVideo" className="link">PLACAS DE VIDEO</Link></li>
+                                    <li><Link to="category/gabinetes" className="link">GABINETES</Link></li>
+                                    <li><Link to="category/fuentesDePoder" className="link">FUENTES DE PODER</Link></li>
+                                    <li><Link to="category/refrigeracion" className="link">REFRIGERACION</Link></li>
+                                    <li><Link to="category/placasDeRed" className="link">PLACAS DE RED</Link></li>
                                 </ul>
                             </li>
-                            <li title="Notebooks" className="active"><Link to="category/notebooks">Notebooks</Link></li>
-                            <li title="Perifericos" className="active"> <Link to="category/perifericos">Perifericos</Link>
+                            <li title="Notebooks"><Link to="category/notebooks" className="active link">Notebooks</Link></li>
+                            <li title="Perifericos"> <Link to="category/perifericos" className="active link">Perifericos</Link>
                                 <ul>
-                                    <li><Link to="category/todos">TODOS</Link></li>
-                                    <li><Link to="category/teclados">TECLADOS</Link></li>
-                                    <li><Link to="category/mousepads">MOUSEPADS</Link></li>
-                                    <li><Link to="category/mouse">MOUSE</Link></li>
-                                    <li><Link to="category/auriculares">AURICULARES</Link></li>
-                                    <li><Link to="category/parlantes">PARLANTES</Link></li>
-                                    <li><Link to="category/yoysticks">YOYSTICK Y VOLANTES</Link></li>
-                                    <li><Link to="category/microfonos">MICROFONOS</Link></li>
+                                    <li><Link to="category/todos" className="link">Todos</Link></li>
+                                    <li><Link to="category/teclados" className="link">Teclados</Link></li>
+                                    <li><Link to="category/mousepads" className="link">Mousepads</Link></li>
+                                    <li><Link to="category/mouse" className="link">Mouses</Link></li>
+                                    <li><Link to="category/auriculares" className="link">Auriculares</Link></li>
+                                    <li><Link to="category/parlantes" className="link">Parlantes</Link></li>
+                                    <li><Link to="category/yoysticks" className="link">Yoystick y Volantes</Link></li>
+                                    <li><Link to="category/microfonos" className="link">Microfonos</Link></li>
                                 </ul>
                             </li>
-                            <li title="Monitores" className="active"><Link to="category/monitores">Monitores</Link></li>        
-                            <li title="Proyectores" className="active"><Link to="category/proyectores">Proyectores y Pantallas</Link></li>               
-                            <li title="AlMACENAMIENTO" className="active"><Link to="category/almacenamiento">Almacenamiento</Link>
+                            <li title="Monitores"><Link to="category/monitores" className="active link">Monitores</Link></li>        
+                            <li title="Proyectores"><Link to="category/proyectores" className="active link">Proyectores y Pantallas</Link></li>               
+                            <li title="AlMACENAMIENTO"><Link to="category/almacenamiento" className="active link">Almacenamiento</Link>
                                 <ul>
-                                    <li><Link to="category/todos">TODOS</Link></li>
-                                    <li><Link to="category/memoriaFlash">MEMORIA FLASH</Link></li>
-                                    <li><Link to="category/pendrives">PENDRIVES</Link></li>
-                                    <li><Link to="category/discosExternos">DISCOS EXTERNOS</Link></li>
+                                    <li><Link to="category/todos" className="link">Todos</Link></li>
+                                    <li><Link to="category/memoriaFlash" className="link">Memoria Flahs</Link></li>
+                                    <li><Link to="category/pendrives" className="link">Pendrives</Link></li>
+                                    <li><Link to="category/discosExternos" className="link">Discos Externos</Link></li>
                                 </ul>
                             </li>
-                            <li title="Impresoras" className="active"><Link to="category/impresionYScanners">Impresion y Scanners</Link></li>
-                            <li title="CONECTIVIDAD Y REDES" className='active'><Link to="category/conectividad">Conectividad y redes</Link>
+                            <li title="Impresoras"><Link to="category/impresionYScanners" className="active link">Impresion y Scanners</Link></li>
+                            <li title="CONECTIVIDAD Y REDES"><Link to="category/conectividad" className="active link">Conectividad y redes</Link>
                             <ul>
-                                <li><Link to="category/todos">TODOS</Link></li>
-                                <li><Link to="category/accesPoint">ACCES POINT</Link></li>
-                                <li><Link to="category/modemRouter">MODEM ROUTER</Link></li>
-                                <li><Link to="category/router">ROUTER</Link></li>
-                                <li><Link to="category/switchs">SWWITCHS</Link></li>
+                                <li><Link to="category/todos" className="link">Todos</Link></li>
+                                <li><Link to="category/accesPoint" className="link">Acces Point</Link></li>
+                                <li><Link to="category/modemRouter" className="link">Modem Router</Link></li>
+                                <li><Link to="category/router" className="link">Mouter</Link></li>
+                                <li><Link to="category/switchs" className="link">Swwitchs</Link></li>
                             </ul>
                             </li>
-                            <li title="TabletasDigitalizadoras" className="active"><Link to="category/tabletasDigitalizadoras">Tabletas digitalizadoras</Link></li>
-                            <li title="Tablets" className="active"><Link to="category/tablets">Tablets</Link></li>
-                            <li title="CELULARES Y TELEFONIA" className="active"><Link to="category/celulares">Celulares y telefonia</Link>
+                            <li title="TabletasDigitalizadoras"><Link to="category/tabletasDigitalizadoras" className="active link">Tabletas digitalizadoras</Link></li>
+                            <li title="Tablets"><Link to="category/tablets" className="active link">Tablets</Link></li>
+                            <li title="CELULARES Y TELEFONIA"><Link to="category/celulares" className="active link">Celulares y telefonia</Link>
                                 <ul>
-                                    <li><Link to="category/todos">TODOS</Link></li>
-                                    <li><Link to="category/celulares">CELULARES</Link></li>
-                                    <li><Link to="category/modemRouter">MODEM ROUTER</Link></li>
-                                    <li><Link to="category/telefonosFijos">TELEFONOS FIJOS</Link></li>
-                                    <li><Link to="category/smartwatch">SMARTWATCH</Link></li>
+                                    <li><Link to="category/todos" className="link">Todos</Link></li>
+                                    <li><Link to="category/celulares" className="link">Celulares</Link></li>
+                                    <li><Link to="category/modemRouter" className="link">Modem Router</Link></li>
+                                    <li><Link to="category/telefonosFijos" className="link">Telefonos Fijos</Link></li>
+                                    <li><Link to="category/smartwatch" className="link">Smartwatch</Link></li>
                                 </ul>
                             </li>
-                            <li title="ACCESORIOS Y CABLES" className="active"><Link to="category/Accesorios">Accesorios</Link>
+                            <li title="ACCESORIOS Y CABLES"><Link to="category/Accesorios" className="active link">Accesorios</Link>
                                 <ul>
-                                    <li><Link to="category/todos">TODOS</Link></li>
-                                    <li><Link to="category/cargadores">CARGADORES</Link></li>
-                                    <li><Link to="category/cables">CABLES</Link></li>
+                                    <li><Link to="category/todos" className="link">TODOS</Link></li>
+                                    <li><Link to="category/cargadores" className="link">CARGADORES</Link></li>
+                                    <li><Link to="category/cables" className="link">CABLES</Link></li>
                                 </ul>
                             </li>
-                            <li title="Soportes" className="active"><Link to="category/soportes">Soportes</Link></li>
-                            <li title="ESTABILIZADORES, UPS Y ZAPATILLAS" className="active"><Link to="category/estabilizadores">Estabilizadores y UPs</Link>
+                            <li title="Soportes"><Link to="category/soportes" className="active link">Soportes</Link></li>
+                            <li title="ESTABILIZADORES, UPS Y ZAPATILLAS"><Link to="category/estabilizadores" className="active link">Estabilizadores y UPs</Link>
                                 <ul>
-                                    <li><Link to="category/todos">TODOS</Link></li>
-                                    <li><Link to="category/estabilizadores">ESTABILIZADORES</Link></li>
-                                    <li><Link to="category/ups">UPS</Link></li>
-                                    <li><Link to="category/zapatillas">ZAPATILLAS</Link></li>
+                                    <li><Link to="category/todos" className="link">TODOS</Link></li>
+                                    <li><Link to="category/estabilizadores" className="link">Estabilizadores</Link></li>
+                                    <li><Link to="category/ups" className="link">UPS</Link></li>
+                                    <li><Link to="category/zapatillas" className="link">Zapatillas</Link></li>
                                 </ul>
                             </li>
-                            <br/>
                             <hr/>
-                            <li title="Informacion" className="active"><Link to="informacion/">Informacion</Link>
+                            <li title="Informacion"><Link to="informacion/" className="active link">Informacion</Link>
                                 <ul>
-                                    <li><Link to="Informacion/seguiTuCompra" className="active">SEGUI TU COMPRA</Link></li>
-                                    <li><Link to="Informacion/centroDeAyuda" className="active">CENTRO DE AYUDA</Link></li>
-                                    <li><Link to="Informacion/metodosDeEnvio" className="active">METODOS DE RETIRO</Link></li>
+                                    <li><Link to="Informacion/seguiTuCompra" className="active link">Sigue tu Compra</Link></li>
+                                    <li><Link to="Informacion/centroDeAyuda" className="active link">Centro de Ayuda</Link></li>
+                                    <li><Link to="Informacion/metodosDeEnvio" className="active link">metodos de Retiro</Link></li>
                                 </ul>
                             </li>
-                            <li title="ofertas" className="active"><Link to="category/">Ofertas</Link>
+                            <li title="ofertas"><Link to="category/" className="active link">Ofertas</Link>
                                 <ul>
-                                    <li><Link to="category/imperdibles" className='active'>!Imperdibles¡</Link></li>
-                                    <li><Link to="category/notebooks">Notebooks</Link></li>
+                                    <li><Link to="category/imperdibles" className="active link">Imperdibles</Link></li>
+                                    <li><Link to="category/notebooks" className="active link">Notebooks</Link></li>
                                 </ul>
                             </li>
                         </ul>

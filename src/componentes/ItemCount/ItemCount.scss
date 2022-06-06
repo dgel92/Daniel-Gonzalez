@@ -2,11 +2,11 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid rgb(9, 255, 0);
-    margin: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
     height: 200px;
-    border: 2px solid rgb(0, 0, 0);
     width: auto;
+    margin: 4vh 2.5vh 2vh 0vh;
 }
 
 .contador-buttom{
@@ -46,5 +46,5 @@
     height: 100px;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
