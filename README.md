@@ -5,8 +5,7 @@
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-![[Depfu](https://badges.depfu.com/badges/c1e23923df3b75df61f1f1c2bf669962/status.svg)](https://depfu.com)
-<br /
+<br />
 
 <div align="center">
   <a href="https://github.com/dgel92">
