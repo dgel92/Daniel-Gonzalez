@@ -8,28 +8,35 @@
 [![Depfu](https://badges.depfu.com/badges/c1e23923df3b75df61f1f1c2bf669962/status.svg)](https://depfu.com)
 <br />
 <div align="center">
-  <a href="https://github.com/Diego-Schmidt/coderhouse-react">
+  <a href="https://github.com/dgel92">
     <img src="https://diego-schmidt.github.io/coderhouse-react/static/media/logo.31c5442b01f1a5c30e92.webp" alt="Logohabemuspapagit " width="184" height="74">
   </a>
 
   <h3 align="center">Proyecto Ecommerce - Curso de CoderHouse</h3>
 <br />
 <h3 align="center">Video de muestra - navegacion e interfaz de la aplicación</h3>
-  <iframe width="1730" height="705" src="https://www.youtube.com/embed/9LaFgNXDd3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <a href="https://youtu.be/9LaFgNXDd3g">
+    <img src="http://i3.ytimg.com/vi/9LaFgNXDd3g/hqdefault.jpg" alt="proyecto-ecommerce" >
+  </a>
 
   <p align="center">
     
-   
 </div>
 
-Proyecto ficticio de sitio e-commerce creado para el curso de ReactJS de CoderHouse, basado en el proyecto Habemus Papa! para el curso de Desarrollo Web.
+Buenas!!🥳🥳
 
-En este proyecto para el curso de ReactJS creamos varios componentes con el objetivo de construir un sitio e-commerce funcional. 
-Los componentes centrales para el desarrollo de la funcionalidad son: ItemListContainer, ItemList, Item, ItemDetailContainer, ItemDetail, CartView, CartWidget, CartContext, NavBar, ItemCount.
+Te presento mi proyecto ficticio para el curso de ReactJs de CoderHouse, esta basado en un sitio ecommerce de productos de computacion y tecnologia de mi ciudad llamado venex (www.venex.com.ar)
 
-Comenzamos instalando el software necesario, NodeJS, npm, etc. Luego con el comando npx create-react-app para generar la estructura básica de un proyecto ReactJS.
+Durante el transcurso de la cursada creamos varios componentes que fuimos integrando a este proyecto con el objetivo de darle mas funcionabilidad a la app, los componentes centrales para el desarrollo de la funcionalidad son:
 
-Decidí reutilizar los diseños del proyecto Habemus Papa! que realizamos en el curso de Desarrollo Web también en CoderHouse https://github.com/Diego-Schmidt/habemus-full-responsive/tree/habemus-sass
+ItemListContainer - ItemList - Item.
+ItemDetailContainer - ItemDetail.
+CartView - CartWidget - CartContext - ItemCount.
+NavBar
+
+Todo comenzo con Nodejs, npm y con un npx-react-app...
+
+Decidí reutilizar el logo del sitio que cree para el curso de desarrollo web que tambien realice en CoderHouse https://github.com/dgel92/subida-gitpage.git
 
 Para crear la funcionalidad necesaria para un proyecto ecommerce con carrito tuvimos que crear varios componentes. NavBar, Footer, CartContext, CartWidget, Item, ItemList, ItemListContainer, ItemDetailContainer, ItemDetail, ItemCount, LoadingSpinner y CartView, CheckOut.
 
@@ -37,7 +44,6 @@ Navbar = Componente que contiene los links para la navegación dentro de la app,
 
 CartWidget = Componente del ícono del carrito de compras.
 
-Footer= Componente con el diseño del footer.
 
 CartContext = Componente con toda la programación para mostrar el estado del contenido del carrito de compras.
 
